@@ -5,17 +5,22 @@ A Python program that generates strong random passwords based on the length ente
 ## Features
 
 - User can choose the password length.
-- Includes letters, numbers, and symbols.
-- Ensures at least one letter, one number, and one symbol.
-- Does not allow password length less than 3.
+- Minimum password length is 4.
+- Includes lowercase letters, uppercase letters, numbers, and symbols.
+- Ensures at least one lowercase letter, one uppercase letter, one number, and one symbol.
+- Uses the `secrets` module for secure random password generation.
+- Validates user input and asks again if an invalid length is entered.
 - Displays the generated password.
-- Saves generated passwords to a text file.
+- Asks the user whether to save the generated password to a text file.
+- Saves the password to `passwords.txt` when the user chooses `y`.
+- Uses functions to keep the code organized and readable.
 
 ## Technologies Used
 
 - Python
-- Random module
-- String module
+- `secrets` module
+- `random` module
+- `string` module
 
 ## How to Run
 
@@ -26,7 +31,3 @@ A Python program that generates strong random passwords based on the length ente
 
 ```bash
 python password_generator.py
-```
-
-5. Enter the desired password length when prompted.
-6. The generated password will be displayed in the terminal and saved in `passwords.txt`.
